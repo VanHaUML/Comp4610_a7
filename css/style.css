@@ -1,0 +1,72 @@
+/*
+	 File: https://vanhauml.github.io/Comp4610_a7/css/style.css
+	 Assignment 7: Using the jQuery Validation Plugin with Your Dynamic Table
+	 Course: COMP4610 GUI I
+	 Name: Van Ha, Senior UMass Lowell EE/CS Student
+	 Email: van_ha@student.uml.edu
+	 Copyright 2018 by Van Ha
+	 Date Updated: 11/25/2018
+
+    CSS file for Interactive Dynamic Table page.
+
+	style.css file was validated at https://jigsaw.w3.org/css-validator/.
+*/
+
+/* Styling for input form */
+fieldset {
+    width: 50%;
+}
+
+label {
+    display: inline-block;
+    width:50%;
+}
+
+legend {
+    font-size: 200%;
+}
+
+input {
+    display: inline-block;
+    width: 50%;
+}
+
+.values {
+    padding: 10px;
+}
+
+.values:not(:last-child) {
+    border-bottom: 1px solid black;
+}
+
+/* styling for multiplcation table */
+td { 
+    padding: 5px;
+    border: 2px solid black;
+}
+
+th {
+    border: 2px solid black;
+    padding: 5px;
+    background-color: red;
+}
+
+tr:first-child th:first-child {
+    visibility: hidden;
+}
+
+tr td {
+    background-color: black;
+    color: white;
+}
+
+tr:nth-child(odd) td:nth-child(even),
+tr:nth-child(even) td:nth-child(odd) {
+    background-color: white;
+    color: black;
+}
+
+/* makes input error messages red */
+div.error {
+    color: red;
+}

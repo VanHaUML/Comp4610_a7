@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous">
+    </script>
+    <script  src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.min.js"></script>
+    <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/additional-methods.min.js"></script>
+    <title>Document</title>
+</head>
+<!--
+	 File: https://vanhauml.github.io/Comp4610_a7/index.html
+	 Assignment 7: Using the jQuery Validation Plugin with Your Dynamic Table
+	 Course: COMP4610 GUI I
+	 Name: Van Ha, Senior UMass Lowell EE/CS Student
+	 Email: van_ha@student.uml.edu
+	 Copyright 2018 by Van Ha
+	 Date Updated: 11/25/2018
+
+    This web app takes input of numbers from the user and generates
+    a multiplication table from those numbers. Input is validated using
+    jQuery Validation plugin.
+
+	index.html file was validated at https://validator.w3.org.
+-->
+<body>
+    <form id="multiplicationTableForm" onsubmit="return false">
+        <fieldset>
+            <legend>Multiplication Table Entries</legend>
+            <div class="values">
+                <label for="lowColVal">Low Column Value: </label>
+                <input type="number" required name="lowColVal" id="lowColVal">
+            </div>
+            <div class="values">
+                <label for="highColVal">High Column Value: </label>
+                <input type="number" required name="highColVal" id="highColVal">
+            </div>
+            <div class="values">
+                <label for="lowRowVal">Low Row Value: </label>
+                <input type="number" required name="lowRowVal" id="lowRowVal">
+            </div>
+            <div class="values">
+                <label for="highRowVal">High Row Value: </label>
+                <input type="number" required name="highRowVal" id="highRowVal"> 
+            </div> 
+        </fieldset>
+        <button id="btnClick" type="submit" onclick="makeTable()">Make Multiplication Table</button>
+    </form>
+    <table id="table"></table>
+    <script defer src="js/mtable.js"></script>
+</body>
+</html>
